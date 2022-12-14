@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #one {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+        #one > div {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 10px 20px;
+            height: 320px;
+        }
+        #one  img {
+            width: 70%;
+            height: 40%;
+        }
+        a {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <a href="cart.html">Your Items</a><br>
+    <a href="womens.html">Womens item</a><br>
+    <h1>Mens Items</h1>
+    <div id="one">
+
+    </div>
+</body>
+</html>
+<script src="./mens.js">
+</script>
