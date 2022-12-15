@@ -1,0 +1,283 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing : border-box;
+}
+
+
+/* Admin_Page Css */
+/* ============================================================ */
+
+
+body{
+    width: 98%;
+    height: auto;
+    background-color: lightcyan;
+    position: relative;
+    /* display: grid;
+    grid-template-columns: repeat(2,1fr); */
+    display: flex;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+#menu{
+    background-color: rgb(100, 97, 97);
+    width: 20%;
+    height: 100% ;
+    position: fixed;
+}
+
+
+#menu .item li{
+    list-style: none;
+    padding: 15px 5px;
+    transition: 0.3s ease;
+}
+
+
+#menu .item li:nth-child(1){
+    border-left: 2px solid lightblue;
+     
+}
+
+
+#menu .item li:hover{
+     background-color: rgb(114, 114, 114);
+     cursor: pointer;
+}
+
+
+#menu .item li:hover a {
+     color: rgb(0, 0, 0);
+}
+
+
+#menu .item li a{
+     text-decoration: none;
+     color: antiquewhite;
+     transition: 0.3s ease;
+}
+
+h3{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+
+#interface{
+    width: calc(100% - 20%);
+    margin-left: 20%;
+}
+
+
+#interface .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(207, 250, 207);
+    padding: 20px;
+    border-bottom: 3px solid violet;
+    
+}
+
+
+#interface .navigation .nav1 .search input{
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    border-color: antiquewhite;
+
+}
+
+
+#interface .navigation .nav1 .search input:hover{
+    background-color: rgb(232, 255, 232);
+    border-color: antiquewhite;
+}
+
+
+#interface .text{
+    text-align: center;
+    color: rgb(255, 175, 70);
+}
+
+.values{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+.values .value-box{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px; 
+}
+
+
+.values .value-box:hover{
+    background-color: rgb(197, 255, 255);
+    cursor: pointer;
+    color: rgb(34, 25, 25);
+}
+
+
+.board{
+   
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgb(244, 244, 244);
+    overflow: auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.board table{
+    width: 100%;   
+    margin: auto;
+}
+
+
+.board table th{
+    padding: 10px;
+    color: rgb(0, 50, 56);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+.board table td{
+    color: rgb(0, 50, 56);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+.board img{   
+   margin-top: 10px;
+   width: 100px;
+   border-radius: 50px; 
+   object-fit: cover;
+   margin: 10px 20px 0px 20px;
+
+}
+
+
+.total-item{
+    text-align: center;
+}
+
+
+/* Total Item Css */
+/* ========================================================== */
+
+
+.cardList{
+    width: 98%;
+    border: 1px solid black;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    text-align: center;
+    border: 20px;
+   
+}
+
+
+.cardList .card{
+    /* border: 1px solid black; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+}
+
+
+.cardList .card .card-img img{
+    width: 200px;
+    height: 200px; 
+    border-radius: 20px;
+}
+
+.cardList .card .card-body h3{
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.cardList .card .card-body h4{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.cardList .card .card-body button{
+    font-size: 15px;
+    font-weight: 400;
+    padding: 5px;
+    border-radius: 10px;
+    border : none;
+    margin-top : 15px
+}
+
+.cardList .card .card-body button:hover{
+    background-color: azure;
+    cursor: pointer;
+    color: rgb(95, 95, 95);
+
+}
+
+.total-item{
+    margin: 10px;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+
+/* User Css */
+/* =========================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
