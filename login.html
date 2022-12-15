@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign in Page</title>
     <style>
-        #TopMost{
+          #TopMost{
             top: 0px;
             position: fixed;
             width: 100%;
@@ -168,7 +169,7 @@ nav {
        }
        /* /////////////////////////////////////////////////// */
        #foot{
-        margin-top: 300px;
+        margin-top: 100px;
        }
        #footer{
         margin: auto;
@@ -216,7 +217,90 @@ nav {
        #footerC div{
         padding: 4px;
        }
-      /*/////////////////////////////////////////////////////////////////  */
+     
+
+#line>a {
+ margin: 20px;
+ text-decoration: none;
+ color: black;
+}
+
+#line>a:hover {
+ text-decoration: underline;
+ color: aqua;
+}
+
+#last {
+ display: flex;
+ align-items: center;
+}
+
+#last p,
+#last img,
+#last a {
+ margin: 10px;
+}
+
+.earth {
+ width: 40px;
+ height: 40px;
+}
+
+button {
+ padding: 15px;
+ border-radius: 30px;
+}
+
+.sign {
+ background-color: rgba(227, 213, 11, 0.893);
+ width: auto;
+ border-radius: 30px;
+ padding: 15px;
+}
+
+button:hover {
+ padding-bottom: 10px;
+}
+
+
+       #main{
+        margin-top: 150px;
+        width: 100%;
+        display: flex;
+        height: 100%;
+      }
+      #imgs{
+        width: 70%;
+        
+      }
+      #imgs>img{
+        width: 100%;
+        height: 100%;
+      }
+      #signin{
+        height: 100%;
+        width: 30%;
+        margin: auto;
+        font-size: 25px;
+        text-align: left;
+        padding: 60px 40px;
+        
+      }
+      form input,label{
+        margin: 14px;
+        padding-right: 44px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        width: 80%;
+      }
+      #butt{
+        background-color: blueviolet;
+        width: 190px;
+        width: 80%;
+      }
+      
+     
     </style>
 </head>
 <body>
@@ -290,56 +374,89 @@ nav {
             </nav>
         </header>
     </div>
-   <div id="foot">
-    <div id="footer">
-        <div id="footer1">
-            <p>Get Email Deals & Earn Cashback</p>
-           <input type="email" value="enter email address">
-           <button>Signup</button>
-        </div>
-        <div id="footer2">
-            <p>Link To This Page & Tell All Your Friends!</p>
-          <p>Copy Link</p>
-        </div>
-    </div>
-    <div id="footerA">
-        
-           <p>About | Help | Accessibility Statements | Contact Us | Parter With Us | Services | Country Region | Connect | Own your Own SOAP Site</p>
-      
-       
-    </div>
-    <div id="footerB">
-        <p>
-            © 1997-2022 Market America, Inc. or its affiliates. All other designated trademarks, copyrights, and brands are the property of their respective owners.</p>
-            <p>Only Customers will receive cashback on qualifying purchases. UnFranchise Owners/Shop Consultants will receive increased IBV instead of cashback on qualifying purchases.</p>
-            <p>Privacy Policy | Terms of Use | Advertising Disclosure | Return Policy | Shipping Information</p>
-
-    </div>
-    <div id="footerC">
-      <div>
-        <img src="https://img.shop.com/Image/images/ir/Shop-ranks-19-in-newsweek-circle.png" alt="">
-        <img src="https://img.shop.com/Image/images/ir/DC360_2022_rank_10_top_500_primary_merch_category.png" alt="">
-        <img src="https://img.shop.com/Image/images/ir/DC360_2022_rank_55_top_100.png" alt="">
-        <img src="https://img.shop.com/Image/images/ir/DC360_2022_rank_80_top_500_and_1000.png" alt="">
-        <img src="https://img.shop.com/Image/images/ir/Shop-ranks-13-in-NC-circle.png" alt="">
-        <img src="https://img.shop.com/Image/images/ir/commonwealth_2022_rank_22_top_2000_tw_english.png" alt="">
-        <img src="https://www.shop.com/feo-cdn/0/m/BS9HJcer0.webp" alt="">
+     
+     <div id="main">
+      <div id="signin">
+        <h1>Log In</h1>
+        <p>For Shopping  <a href="./signup.html">Create an account</a></p>
+        <form>
+          <label for="">Enter your Email</label><br>
+          <input type="email" id="email" placeholder="Enter your email id"><br>
+          <label for="">Password</label><br>
+          <input type="password"  id="password" placeholder="Enter your password"><br>
+           <input id="butt" type="submit" value="Login" />
+         <!-- <a href="./index.html"></a> -->
+        </form>
       </div>
-        
-    </div>
-   </div>
-   
+      <div id="imgs">
+        <img src="http://127.0.0.1:5500/login%20image.png" alt="">
+      </div>
+     </div>
+     <div id="foot">
+        <div id="footer">
+            <div id="footer1">
+                <p>Get Email Deals & Earn Cashback</p>
+               <input type="email" value="enter email address">
+               <button>Signup</button>
+            </div>
+            <div id="footer2">
+                <p>Link To This Page & Tell All Your Friends!</p>
+              <p>Copy Link</p>
+            </div>
+        </div>
+        <div id="footerA">
+            
+               <p>About | Help | Accessibility Statements | Contact Us | Parter With Us | Services | Country Region | Connect | Own your Own SOAP Site</p>
+          
+           
+        </div>
+        <div id="footerB">
+            <p>
+                © 1997-2022 Market America, Inc. or its affiliates. All other designated trademarks, copyrights, and brands are the property of their respective owners.</p>
+                <p>Only Customers will receive cashback on qualifying purchases. UnFranchise Owners/Shop Consultants will receive increased IBV instead of cashback on qualifying purchases.</p>
+                <p>Privacy Policy | Terms of Use | Advertising Disclosure | Return Policy | Shipping Information</p>
+    
+        </div>
+        <div id="footerC">
+          <div>
+            <img src="https://img.shop.com/Image/images/ir/Shop-ranks-19-in-newsweek-circle.png" alt="">
+            <img src="https://img.shop.com/Image/images/ir/DC360_2022_rank_10_top_500_primary_merch_category.png" alt="">
+            <img src="https://img.shop.com/Image/images/ir/DC360_2022_rank_55_top_100.png" alt="">
+            <img src="https://img.shop.com/Image/images/ir/DC360_2022_rank_80_top_500_and_1000.png" alt="">
+            <img src="https://img.shop.com/Image/images/ir/Shop-ranks-13-in-NC-circle.png" alt="">
+            <img src="https://img.shop.com/Image/images/ir/commonwealth_2022_rank_22_top_2000_tw_english.png" alt="">
+            <img src="https://www.shop.com/feo-cdn/0/m/BS9HJcer0.webp" alt="">
+          </div>
+            
+        </div>
+       </div>
 </body>
-
-
-</html>
 <script>
- function show(){
-        document.getElementById("slidebar").classList.toggle("active")
-    }
-    function show2(){
-        document.getElementById("slidebar2").classList.toggle("active")
-    }
-   
 
+  let data=JSON.parse(localStorage.getItem("account-data"))
+  // console.log(data)
+  let form=document.querySelector("form")
+  form.addEventListener("submit",function(event){
+    event.preventDefault()
+    var usermail=document.querySelector("#email").value
+    var userpass=document.querySelector("#password").value;
+ let flag=false;
+    for(let i=0;i<data.length;i++){
+      if(usermail===data[i].entermail && userpass===data[i].enterpass){
+        flag=true
+      }
+    }
+    if(flag==true){
+         alert("Log in Successful")
+        //  window.location.href="index.html"
+          window. location.assign("index.html")
+    }else{
+        alert("Wrong Credentials")
+        
+    }
+  })
+ 
+ 
+   
 </script>
+</html>
