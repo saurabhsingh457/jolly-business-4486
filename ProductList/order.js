@@ -1,6 +1,7 @@
-let data=JSON.parse(localStorage.getItem("add"))
+let data=JSON.parse(localStorage.getItem("OrderP"))
+console.log(data)
 let TotoleOdr = document.querySelector("#Prodoct_sum")+data.length
-// console.log(TotoleOdr)
+console.log(TotoleOdr)
 let sum=0;
 
 
@@ -17,20 +18,20 @@ for(let i=0;i<data.length;i++){
     p1.innerText=data[i].name
     p2.innerText=data[i].price  
     // p3.innerText=data[i].strikedoffprice
-    butt1.innerText="Order Process"
-    butt2.innerText="Cancel Order"
+    butt1.innerText="Cancel Order"
+    butt2.innerText="Order Complete"
 
     div1.append(img,p1,p2,p3,butt1,butt2)
     butt1.addEventListener("click",function(){
-        alert("Order Processing")
-        addData("OrderP",data[i]); 
-        data.splice(data.length[i],1);
-        localStorage.setItem("add",JSON.stringify(data))
+        alert("Cancel Order")
+        addData("cancel",data[i]);
+        data.splice(data.length[i],1)
+        localStorage.setItem("OrderP",JSON.stringify(data))
     })
     sum+=+data[i].price;
     butt2.addEventListener("click",function(){
-        alert("Order Cancel")
-        addData("cancel",data[i]);
+        alert("Order Complete")
+        event.target.parentNode.remove();
         data.splice(data.length[i],1)
         localStorage.setItem("OrderP",JSON.stringify(data))
     })
