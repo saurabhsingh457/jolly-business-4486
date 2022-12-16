@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+        #one > div {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 10px 20px;
+            height: 320px;
+        }
+        #one  img {
+            width: 70%;
+            height: 40%;
+        }
+    </style>
+</head>
+<body>
+   <h1>Your added items are</h1> 
+   <h2>added items </h2>
+   <label for="">Promo</label><br>
+
+   <input type="text" placeholder="apply your promo code">
+   <button>apply promo</button>
+   <h2>Your bill ammout</h2>
+   <h3>Total Bill</h3>
+
+  
+   <h1>cart items</h1>
+   <div id="one"></div>
+</body>
+</html>
+<script src="./cart.js"></script>
