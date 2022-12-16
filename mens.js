@@ -310,7 +310,7 @@ const mensData = [
         alert("Item added to Cart")
         addData("add",mensData[i]);
     })
-    document.querySelector("div").append(div1)
+    document.getElementById("main-section").append(div1)
   }
 
   function addData(key,value){
