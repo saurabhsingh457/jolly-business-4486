@@ -74,6 +74,7 @@ h3{
     width: calc(100% - 20%);
     margin-left: 20%;
     
+    
 }
 
 
@@ -94,6 +95,7 @@ h3{
     border-radius: 10px;
     border: none;
     border-color: antiquewhite;
+    
 
 }
 
@@ -107,13 +109,19 @@ h3{
 #interface .text{
     text-align: center;
     color: rgb(255, 253, 250);
+    
+  
 }
 
 .values{
-    padding: 20px;
+    height: 100vh;
+    padding: 200px;
     display: flex;
     justify-content: space-around;
     text-align: center;
+    background-image: url(https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=600); 
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
 }
 
 
@@ -308,6 +316,31 @@ h1{
 #btn{
     margin-bottom: 25px;
     width: 20%;
+}
+
+#navigation-top{
+    height: 50px;
+    width: 500px;
+    /* border: 1px solid black; */
+    background-color: rgb(230, 207, 207);
+    position: absolute;
+    left: 45%;
+    top: 15%;
+    border-radius: 20px;
+    color: black;
+    margin: -30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    
+
+}
+
+#navigation-top #myText{
+    color: rgb(24, 27, 27);
+    font-family: sans-serif;
+    position: absolute;
+    top: -16px;
+    right: 30px;
+
 }
 
 
