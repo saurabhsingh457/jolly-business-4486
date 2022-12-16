@@ -62,6 +62,7 @@
 </html>
 <script>
 
+       
 
     let userData = [
   {
@@ -403,9 +404,7 @@
     window.addEventListener("load",()=>{
         localStorage.setItem("userProductData",JSON.stringify(userData))
 
-        renderCardList(userData)
-       
-        
+        renderCardList(userData)         
     })
 
 
@@ -426,13 +425,29 @@
          </div
 
         `
-        console.log("Neerj")
-        console.log(mainSection)
-        console.log(mainSection.div)
-        
-      
+
+        // console.log(mainSection)
+        // let cardLishtProduct = document.querySelectorAll(".card")
+        // let productName = document.querySelector(".product-name")
+        // let removeProduct = document.querySelector(".remove-Product")
+
+        // console.log(productName.innerHTML)
+        // console.log(removeProduct.innerHTML)
+
+        // for(let i=0; i<cardLishtProduct.length; i++){
+        //   console.log(cardLishtProduct[i])
+
+        // }
+
    
     }
+
+
+    function removeData(cardData){
+         
+      let item = cardData.parentElement.parentElement
+       item.remove()
+     }
 
 
     function getAsCard(image, name, price){
@@ -444,13 +459,14 @@
                 <img src = ${image} />
             </div> 
             <div class = "card-body">
-                 <h3>${name}</h3> 
+                 <h3 class="product-name">${name}</h3> 
                  <h4>${price}</h4> 
-                 <button>Remove</button>
+                 <button class="remove-Product" onClick="removeData(this)">Remove</button>
             </div>          
          </div>
         
         `
+        
         
     }
 
