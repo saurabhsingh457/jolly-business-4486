@@ -21,7 +21,7 @@
         </div>
         <div class="item">
           <li><a class="dashboard" href="./admin_page.html">Dashboard</a></li>
-          <li></i><a href="./total_item.html">Total Item</a></li>
+          <li></i><a href="./total_item.html">Our Product</a></li>
           <li></i><a href="./user.html">Total User</a></li>
           <li></i><a href="./new_product.html">Add New Product</a></li>
           <li><a href="#">Order Detail</a></li>
@@ -34,20 +34,10 @@
     </section>
 
     <section id="interface">
-        <h1 class="text">Welcome to User Page</h1>
-      
-        <div class="navigation">
-            
-            <div class="nav1">
-                <div class="search">
 
-                    <input type="text" placeholder="Search">
-                    
-                </div>           
-            </div>
-        </div>
 
         <div class="board">
+            
             <table>
                 <thead>
                     <tr>
@@ -59,8 +49,8 @@
                 </thead>
         
 
-                <!-- <tbody>
-                    <tr>
+                <tbody id="user-detail">
+                    <!-- <tr>
                         <td class="person">
                             <img src="https://cdn.pixabay.com/photo/2015/01/08/18/29/entrepreneur-593358__340.jpg" alt="">
                             <div class="people-detail">
@@ -72,8 +62,8 @@
                         <td class="mail pad">abc@gmail.com</td>
                         <td class="age pad">23</td>
 
-                    </tr>
-                </tbody> -->
+                    </tr> -->
+                </tbody>
 
             </table>
 
@@ -88,7 +78,7 @@
 
 
 const userFetchURL = "https://project-database-h3eo.vercel.app/userDetail"
-const mainSection = document.querySelector(".board")
+const mainSection = document.querySelector("#user-detail")
 
 
 window.addEventListener("load",()=>{
@@ -141,7 +131,7 @@ function getAsCard(name, email, address, image, id){
 
     <div class = "card">
 
-        <tbody>
+       
             <tr>
                  <td class="person">
                      <img src="${image}" alt="">
@@ -155,7 +145,7 @@ function getAsCard(name, email, address, image, id){
                 <td class="age pad">${id}</td>
 
             </tr>
-        </tbody>
+     
 
     </div>
     `
