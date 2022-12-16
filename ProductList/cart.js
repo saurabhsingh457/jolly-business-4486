@@ -32,7 +32,7 @@ for(let i=0;i<data.length;i++){
         alert("Order Cancel")
         addData("cancel",data[i]);
         data.splice(data.length[i],1)
-        localStorage.setItem("OrderP",JSON.stringify(data))
+        localStorage.setItem("add",JSON.stringify(data))
     })
     document.querySelector("#kav").append(inp,div1)
   }
