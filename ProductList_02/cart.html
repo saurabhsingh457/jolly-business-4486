@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            text-align: center;
+        }
+
+        #one {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            
+        }
+        #one > div {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 10px 20px;
+            height: 320px;
+            border-radius: 20px;
+        }
+        #one img {
+            width: 70%;
+            height: 40%;
+        }
+    </style>
+</head>
+<body>
+
+    
+        <h1>Your added items are</h1> 
+        <h2>added items </h2>
+        <!-- <label for="">Promo</label><br> -->
+     
+        <!-- <input type="text" placeholder="apply your promo code"> -->
+        <!-- <button>apply promo</button> -->
+        <h2>Your bill ammout</h2>
+        <h3>Total Bill</h3>
+        <hr/>
+
+
+   <h1>cart items</h1>
+   <div id="one"></div>
+</body>
+</html>
+<!-- <script src="./cart.js"></script> -->
+
+<script>
+
+let data=JSON.parse(localStorage.getItem("add"))
+document.querySelector("h2").innerText=data.length
+
+let sum=0;
+
+for(let i=0;i<data.length;i++){
+    let div1=document.createElement("div");
+    let img=document.createElement("img");
+    let p1=document.createElement("p")
+    let p2=document.createElement("p")
+    let p3=document.createElement("p")
+    let inp=document.createElement("input")
+    let butt1=document.createElement("button")
+    let butt2=document.createElement("button")
+    let butt3=document.createElement("button")
+
+    img.setAttribute("src",data[i].image_url)
+    p1.innerText=data[i].name
+    p2.innerText=data[i].price
+    p3.innerText=data[i].strikedoffprice
+    butt1.innerText="Add this"
+    butt2.innerText="delete"
+    butt3.innerText="Pay Now"
+
+    div1.append(img,p1,p2,p3,inp,butt1,butt2,butt3)
+    butt1.addEventListener("click",function(){
+        p2.innerText=data[i].price*inp.value
+    })
+    sum+=+data[i].price;
+    butt2.addEventListener("click",function(){
+        event.target.parentNode.remove();
+        data.splice(data.length[i],1)
+        localStorage.setItem("add",JSON.stringify(data))
+    })
+
+    butt3.addEventListener("click",()=>{
+        window.location.href = "./checkout.html"
+      })   
+    document.querySelector("div").append(div1)
+  }
+
+  
+  document.querySelector("h3").innerText=sum;
+  document.querySelector("button").addEventListener("click",function(){
+    if(document.querySelector("input").value==="masai30"){
+        document.querySelector("h3").innerText=sum*(.7)
+    }else{
+        document.querySelector("h3").innerText=sum
+    }
+  })
+
+
+
+</script>
+
