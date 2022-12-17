@@ -7,18 +7,40 @@
     <title>payment</title>
     <style>
 
-        body{
-            background-color: beige;
+
+        body {
+            background-image: url('https://images.pexels.com/photos/3943722/pexels-photo-3943722.jpeg?auto=compress&cs=tinysrgb&w=600');
+            background-size: cover;
+            background-repeat: no-repeat;
         }
      
         h1{
             color: rgb(0, 0, 0);
-            text-align: center;            
+            text-align: center;      
+            font-weight: 900;      
+        }
+     
+        h1:hover{
+            cursor: pointer;
+            color: rgb(116, 112, 112); 
+            text-align: center; 
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;    
+            padding: 10px;    
+            border-radius: 50%;
+        }
+     
+        h3:hover{
+            cursor: pointer;
+            color: rgb(116, 112, 112);          
         }
 
         h3{
-            color: rgb(214, 0, 0);
-            font-size: 30px;                    
+            width: 70%;
+            color: rgb(48, 43, 43);
+            font-size: 30px;        
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;    
+            padding: 10px;     
+            border-radius: 10px;   
         }
 
         #container{  
@@ -28,7 +50,8 @@
             grid-template-columns: repeat(2,1fr);
             justify-content: space-between;
             margin: auto;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            box-shadow: rgb(220, 140, 252) 0px 3px 8px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
             padding: 30px;
 
         }
@@ -70,13 +93,19 @@
         }
 
         button:hover{
-            background-color: rgb(189, 255, 255);
+            background-color: rgb(153, 163, 163);
             cursor: pointer;
         }
 
         .billing-style:hover{
-            background-color: rgb(228, 246, 252);
-            
+            background-color: rgb(198, 212, 216);
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .payment-style:hover{
+            background-color: rgb(219, 223, 224);
+            cursor: pointer;
         }
 
         #payment-child{
@@ -84,17 +113,35 @@
             top: -10%;
         }
 
+             
+        button{
+            cursor: pointer;
+            color: rgb(0, 0, 0); 
+            text-align: center; 
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;    
+            padding: 3px;    
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 900;
+     
+        }
+
+        input{
+            border: 1px solid rgb(136, 112, 112);
+            font-size: 10px;
+        }
 
     </style>
 </head>
 <body>
+
     <h1>Pay Here</h1>
 
     <form action="">
     <div id="container">
         <div id="address">
             <h3>Billing Address Please</h3>
-            <input class="billing-style" type="text" placeholder="your name" required><br>
+            <input id="abcd" class="billing-style" type="text" placeholder="your name" required><br>
             <input class="billing-style"  type="email" placeholder="your email" required><br>
             <input class="billing-style"  id="myadd" type="text" placeholder="your Address" required><br>
             <input class="billing-style"  type="text" placeholder="your city" required><br>

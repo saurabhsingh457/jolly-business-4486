@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+/*         
         *{
             text-align: center;
         }
@@ -28,32 +28,144 @@
             width: 70%;
             height: 40%;
         }
+
+        
+ */
+
+        body{
+            /* border: 1px solid black; */
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            border-radius: 10px;
+        }
+
+         *{
+            text-align: center;
+         }
+    
+         #top-section{
+            width: 50%;
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        
+            margin: auto;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+         }
+    
+         #top-section h3{
+             position: absolute;
+             left: 0%;
+             right:4%;
+             bottom: 74%;
+         }
+  
+
+         #one{
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            margin-bottom: 50px;
+            padding: 0px 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight:600 ;
+         }
+
+         #one div{
+            /* border: 1px solid black; */
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;
+            padding: 30px;
+         }
+
+
+         #one img{
+            /* border: 1px solid black; */
+            width: 200px;
+            height: 200px;
+            
+         }
+
+         h1{
+            color: rgb(53, 52, 52);
+         }
+
+         h1:hover{
+            color: rgb(90, 74, 74);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            border-radius: 10px;
+            padding: 5px;
+            margin: auto;
+         }
+
+         #aded-item{
+            position: relative;
+            right: 230px;
+            top: 7px;
+            
+         }
+
+         button{
+            color: rgb(37, 23, 23);
+            border-radius: 10px;
+            border: 1px lavender;
+            padding: 10px;
+            margin-right: 5px;
+            font-weight: 500;
+         }
+
+         button:hover{
+            background-color: rgb(255, 219, 161);
+            cursor: pointer;
+           
+         }
+
+         input{
+            margin-bottom: 10px;
+         }
+
+         
+
+
+
     </style>
 </head>
 <body>
-
-    
-        <h1>Your added items are</h1> 
-        <h2>added items </h2>
-        <!-- <label for="">Promo</label><br> -->
-     
-        <!-- <input type="text" placeholder="apply your promo code"> -->
-        <!-- <button>apply promo</button> -->
-        <h2>Your bill ammout</h2>
+   
+    <div id="top-section">
+        <h1>Total Item :</h1> 
+        <h2 id="aded-item">added items  </h2>
+        <!-- <label for="">Promo</label><br>
+        <input type="text" placeholder="apply your promo code">
+        <button>apply promo</button> -->
+        <h2>Your bill ammout :</h2>
         <h3>Total Bill</h3>
         <hr/>
+    </div>
 
 
-   <h1>cart items</h1>
-   <div id="one"></div>
+   <div id="one">
+    
+   </div>
+
+
 </body>
 </html>
-<!-- <script src="./cart.js"></script> -->
 
 <script>
+ let data=JSON.parse(localStorage.getItem("add"))
 
-let data=JSON.parse(localStorage.getItem("add"))
-document.querySelector("h2").innerText=data.length
+window.addEventListener("load",()=>{
+   
+    document.querySelector("h2").innerText=data.length
+    console.log(data)
+
+})
+
+let mainSection = document.getElementById("one")
 
 let sum=0;
 
@@ -70,11 +182,13 @@ for(let i=0;i<data.length;i++){
 
     img.setAttribute("src",data[i].image_url)
     p1.innerText=data[i].name
-    p2.innerText=data[i].price
-    p3.innerText=data[i].strikedoffprice
+    p2.innerText=`$`+ data[i].price
+    p3.innerText=`$`+data[i].strikedoffprice
     butt1.innerText="Add this"
     butt2.innerText="delete"
     butt3.innerText="Pay Now"
+    inp.placeholder = "Apply Coupun"
+    
 
     div1.append(img,p1,p2,p3,inp,butt1,butt2,butt3)
     butt1.addEventListener("click",function(){
@@ -82,27 +196,27 @@ for(let i=0;i<data.length;i++){
     })
     sum+=+data[i].price;
     butt2.addEventListener("click",function(){
+        
         event.target.parentNode.remove();
-        data.splice(data.length[i],1)
+        data.splice(`$`+data.length[i],1)
         localStorage.setItem("add",JSON.stringify(data))
     })
 
     butt3.addEventListener("click",()=>{
         window.location.href = "./checkout.html"
       })   
-    document.querySelector("div").append(div1)
+    mainSection.append(div1)
   }
 
   
-  document.querySelector("h3").innerText=sum;
+  document.querySelector("h3").innerText=`$ `+sum;
   document.querySelector("button").addEventListener("click",function(){
     if(document.querySelector("input").value==="masai30"){
-        document.querySelector("h3").innerText=sum*(.7)
+        document.querySelector("h3").innerText=sum*(0.7)
     }else{
         document.querySelector("h3").innerText=sum
     }
   })
-
 
 
 </script>
