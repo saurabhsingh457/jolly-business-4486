@@ -412,6 +412,28 @@ nav {
       #t10 div:last-child img:hover{
         box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
       }
+
+      .toggle-btn3{
+        text-decoration: none;
+         cursor: pointer;
+      }
+
+      .toggle-btn4{
+        text-decoration: none;
+         cursor: pointer;
+      }
+
+      .toggle-btn2{
+       
+         cursor: pointer;
+      }
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -421,7 +443,7 @@ nav {
         </div>
        <div id="logos">
         <div id>
-            <a href="./index.html"> <img id="we" src="logo js201.jpeg" alt=""></a>
+            <a href="./index.html"> <img id="we" src="./main/logo js201.jpeg" alt=""></a>
         </div>
         <div>
             <input type="text" value="search SHOP.com">
@@ -442,7 +464,7 @@ nav {
                         <ul>
                             <li> <a href="p1.html">Get-your-business-online</a> </li>
                             <li><a href="p2.html">Marketing-platform</a></li>
-                            <li><a href="p3.html">Audience</a></li>
+                            <li><a href="./ProductList_02/mens.html">Cloths</a></li>
                             <li>Create-content </li>
                             <li>Automations</li>
                             <li>Insights</li>
@@ -459,11 +481,11 @@ nav {
                                <p>Stores </p>
                                <p>Deals</p>
                                <p>SHOP Travel </p>
-                               <p>Departments </p>
+                               <p><a href="./admin_page/admin_page.html">Admin Side</a>  </p>
                                <p>ShopBuddy
                                </p>
                            </div>
-                           <div class="toggle-btn3" > <img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt=""> Orders</div>
+                           <div class="toggle-btn3" > <img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt="">Order</div>
                            <div class="toggle-btn4" > <img src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg" alt="">Cart</div>
                         <div class="toggle-btn2" onclick="show2()"> <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt=""> Sign in</div>
                        
@@ -471,9 +493,9 @@ nav {
                         <div id="slidebar2">
                        
                         <ul>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="signup.html">Create Account</a></li>
-                            <li><a href="p3.html">Marketing Library</a></li>
+                            <li><a href="./main/login.html">Login</a></li>
+                            <li><a href="./main/signup.html">Create Account</a></li>
+                            <li><a href="./main/logo js201.jpeg">Marketing Library</a></li>
                             <li>For Freelancers & agencies </li>
                             <li>whats's right for me</li>
                             <li>For Developres</li>
@@ -697,6 +719,17 @@ nav {
     function show2(){
         document.getElementById("slidebar2").classList.toggle("active")
     }
+
+    let orderBtn3 = document.querySelector(".toggle-btn3")
+    orderBtn3.addEventListener("click",()=>{
+      window.location.href = "./ProductList_02/mens.html"
+    })
+   
+
+    let orderBtn4 = document.querySelector(".toggle-btn4")
+    orderBtn4.addEventListener("click",()=>{
+      window.location.href = "./ProductList_02/cart.html"
+    })
    
 
 </script>

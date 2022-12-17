@@ -1,3 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            text-align: center;
+        }
+
+        #container{
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 5px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+         
+     
+        }
+
+        #main-section {
+            width: 150%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+            margin: auto;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            border-radius: 20px;
+            padding: 20px;
+            position: relative;
+            bottom: -150px;
+            left: -55%;
+        
+    
+        }
+        #main-section div {
+            height: 400px;
+            width: 200px;
+            text-align: center;
+            /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+            padding: 10px 20px;
+            border-radius: 20px;    
+           
+        }
+        
+        #main-section div button {
+            border-radius: 10px;
+            padding: 7px;         
+        }
+        
+        #main-section div button:hover {
+            background-color: rgb(229, 243, 255);  
+            cursor: pointer;    
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+            color: rgb(47, 35, 35);
+        }
+        
+
+
+        #main-section img{
+            width: 250px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+        p{
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        } 
+
+        #menu{
+            width: 200%;
+            height: 100px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            border-radius: 20px;
+            padding: 10px;
+            background-color: aliceblue;
+            position: relative;
+            right: -40%;
+            display : flex;
+            justify-content: space-evenly;
+           
+    
+        }
+
+        #menu a{
+
+            border: 1px solid rgb(86, 22, 22);
+            list-style: none;
+            transition: 0.3s ease;
+            font-size: 20px;
+            margin: 20px;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            border-radius: 20px;
+            color: rgb(52, 49, 46);   
+        }
+
+        #menu a:hover{
+            background-color: rgb(254, 204, 204);
+            cursor: pointer;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+
+        <div id="menu">
+            <a class="menu-button" href="cart.html">Your Items</a><br>
+            <a class="menu-button" href="womens.html">Womens item</a><br>
+            <a class="menu-button" href="./mens.html">Mens item</a><br>
+        </div>
+
+        <div>
+            <div id="main-section"></div>
+        </div>
+     
+    </div>
+   
+</body>
+</html>
+<!-- <script src="./mens.js">
+</script> -->
+
+<script>
+
 const mensData = [
     {
       "image_url": "https://m.media-amazon.com/images/I/71V0TFm3MsL._AC_UL320_.jpg",
@@ -319,3 +460,5 @@ const mensData = [
     localStorage.setItem(key,JSON.stringify(newData))
   }
 
+
+</script>

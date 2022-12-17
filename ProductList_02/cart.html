@@ -1,3 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            text-align: center;
+        }
+
+        #one {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            
+        }
+        #one > div {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 10px 20px;
+            height: 320px;
+            border-radius: 20px;
+        }
+        #one img {
+            width: 70%;
+            height: 40%;
+        }
+    </style>
+</head>
+<body>
+
+    
+        <h1>Your added items are</h1> 
+        <h2>added items </h2>
+        <!-- <label for="">Promo</label><br> -->
+     
+        <!-- <input type="text" placeholder="apply your promo code"> -->
+        <!-- <button>apply promo</button> -->
+        <h2>Your bill ammout</h2>
+        <h3>Total Bill</h3>
+        <hr/>
+
+
+   <h1>cart items</h1>
+   <div id="one"></div>
+</body>
+</html>
+<!-- <script src="./cart.js"></script> -->
+
+<script>
+
 let data=JSON.parse(localStorage.getItem("add"))
 document.querySelector("h2").innerText=data.length
 
@@ -48,3 +102,8 @@ for(let i=0;i<data.length;i++){
         document.querySelector("h3").innerText=sum
     }
   })
+
+
+
+</script>
+
