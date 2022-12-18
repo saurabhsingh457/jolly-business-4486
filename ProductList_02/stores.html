@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Item</title>
+    <script src="https://kit.fontawesome.com/4ca93ca64a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../admin_page/admin.css">
+      <!-- <style>
+          #interface{
+              position: absolute;
+              left: -100px;
+          }
+
+          .total-item{
+              color: black;
+          }
+
+          .total-item:hover{
+              color: rgb(26, 15, 15);
+          }
+
+
+      </style> -->
+
+</head>
+<body>
+
+  
+   
+
+     <section id="menu">
+
+        <div class="logo">
+           <img src="" alt="">
+           <h3>WeShop</h3>
+           <hr/>
+        </div>
+          <div class="item"> 
+          <li><a class="dashboard" href="../index.html">Home</a></li>
+          <li></i><a href="./total_item.html">Our Product</a></li>
+          <li></i><a href="./user.html">Total User</a></li>
+          <li></i><a href="./new_product.html">Add New Product</a></li>
+          <li><a href="../ProductList/cart.html">Order Detail</a></li>
+          <li><a href="#">Devilered Product</a></li>
+          <li><a href="#">User Management</a></li>
+       
+
+        </div>
+
+    </section>
+
+    <section id="interface">
+ 
+        <h1 class="total-item">Our Store</h1>
+        <hr/>
+
+        <div id="item-container">
+
+        </div>
+
+
+    </section>
+
+    
+
+
+    
+    
+</body>
+</html>
+<script>
+
+       
+
+    let userData = [
+  {
+    "image_url": "https://m.media-amazon.com/images/I/71V0TFm3MsL._AC_UL320_.jpg",
+    "name": "FUNDAY FASHION ",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/31X4MQl5BtL._AC_UL320_.jpg",
+    "name": "Men Striped Round Neck Blue",
+    "price": "1020",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/400/400/xif0q/jacket/g/h/u/m-1-no-wnjk6020-wrogn-original-imaghhyhsbvtfwgh.jpeg?q=70",
+    "name": "MEN'S REEBOK RUNNING ROADMAP SHOES",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/400/400/ktszgy80/sari/q/3/v/free-pink-combo-at-1108-3-1349-anand-sarees-unstitched-original-imag72p5hrbwfthx.jpeg?q=70",
+    "name": "Printed Daily Wear Georgette Saree",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/400/400/ktszgy80/sari/s/2/g/free-combo-at-1108-2-1491-anand-sarees-unstitched-original-imag72p26d9muy7v.jpeg?q=70",
+    "name": "Men Solid Casual Jacket",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/612/612/xif0q/jacket/j/k/b/l-1-no-tnvgywthdfuljacket-k15-tripr-original-imagkzg9dtrztzhu.jpeg?q=70",
+    "name": "Men Solid Casual Jacket",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/31ZBZisgW3L._AC_SR160,200_.jpg",
+    "name": "FUNDAY FASHION ",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/61tOUM33AeL._AC_SR320,400_.jpg",
+    "name": "Columbia Women's Suttle Mountain",
+    "price": "1020",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/61sq9cq8ggL._UX679_.jpg",
+    "name": "Columbia Womens Jacket",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/41LudCSftuL._AC_SR160,200_.jpg",
+    "name": "Printed Daily Wear Georgette Saree",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/717WHMe33EL._AC_UL320_.jpg",
+    "name": "U.S. POLO ASSN.",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/818-VoCs5UL._AC_UL320_.jpg",
+    "name": "United Colors of Benetton",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/71V0TFm3MsL._AC_UL320_.jpg",
+    "name": "FUNDAY FASHION ",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/31X4MQl5BtL._AC_UL320_.jpg",
+    "name": "Men Striped Round Neck Blue",
+    "price": "1020",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/400/400/xif0q/jacket/g/h/u/m-1-no-wnjk6020-wrogn-original-imaghhyhsbvtfwgh.jpeg?q=70",
+    "name": "MEN'S REEBOK RUNNING ROADMAP SHOES",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/400/400/ktszgy80/sari/q/3/v/free-pink-combo-at-1108-3-1349-anand-sarees-unstitched-original-imag72p5hrbwfthx.jpeg?q=70",
+    "name": "Printed Daily Wear Georgette Saree",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/400/400/ktszgy80/sari/s/2/g/free-combo-at-1108-2-1491-anand-sarees-unstitched-original-imag72p26d9muy7v.jpeg?q=70",
+    "name": "Men Solid Casual Jacket",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/612/612/xif0q/jacket/j/k/b/l-1-no-tnvgywthdfuljacket-k15-tripr-original-imagkzg9dtrztzhu.jpeg?q=70",
+    "name": "Men Solid Casual Jacket",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/31ZBZisgW3L._AC_SR160,200_.jpg",
+    "name": "FUNDAY FASHION ",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/61tOUM33AeL._AC_SR320,400_.jpg",
+    "name": "Columbia Women's Suttle Mountain",
+    "price": "1020",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/61sq9cq8ggL._UX679_.jpg",
+    "name": "Columbia Womens Jacket",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/41LudCSftuL._AC_SR160,200_.jpg",
+    "name": "Printed Daily Wear Georgette Saree",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/717WHMe33EL._AC_UL320_.jpg",
+    "name": "U.S. POLO ASSN.",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/818-VoCs5UL._AC_UL320_.jpg",
+    "name": "United Colors of Benetton",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/71V0TFm3MsL._AC_UL320_.jpg",
+    "name": "Amazon Brand - Symbol ",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/31X4MQl5BtL._AC_UL320_.jpg",
+    "name": "Men Levi's",
+    "price": "1020",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/400/400/xif0q/jacket/g/h/u/m-1-no-wnjk6020-wrogn-original-imaghhyhsbvtfwgh.jpeg?q=70",
+    "name": "Puma",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/400/400/ktszgy80/sari/q/3/v/free-pink-combo-at-1108-3-1349-anand-sarees-unstitched-original-imag72p5hrbwfthx.jpeg?q=70",
+    "name": "Red Tape",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/400/400/ktszgy80/sari/s/2/g/free-combo-at-1108-2-1491-anand-sarees-unstitched-original-imag72p26d9muy7v.jpeg?q=70",
+    "name": "Men United Colors of Benetton",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/612/612/xif0q/jacket/j/k/b/l-1-no-tnvgywthdfuljacket-k15-tripr-original-imagkzg9dtrztzhu.jpeg?q=70",
+    "name": "Men Sweater",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/31ZBZisgW3L._AC_SR160,200_.jpg",
+    "name": "RARE",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/61tOUM33AeL._AC_SR320,400_.jpg",
+    "name": "Columbia Women's Suttle Mountain",
+    "price": "1020",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/61sq9cq8ggL._UX679_.jpg",
+    "name": "Women's Rayon A-Line Max",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/41LudCSftuL._AC_SR160,200_.jpg",
+    "name": "Printed Women's Slim Fit Blouse",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/717WHMe33EL._AC_UL320_.jpg",
+    "name": "Women Blouse.",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/818-VoCs5UL._AC_UL320_.jpg",
+    "name": "Black Fit & Flare Dress (EP1053A)",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/71V0TFm3MsL._AC_UL320_.jpg",
+    "name": "FUNDAY FASHION ",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/31X4MQl5BtL._AC_UL320_.jpg",
+    "name": "Women's Polyester A-Line Mid",
+    "price": "1020",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/400/400/xif0q/jacket/g/h/u/m-1-no-wnjk6020-wrogn-original-imaghhyhsbvtfwgh.jpeg?q=70",
+    "name": "Women's Polyester-P Casual Dress",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/400/400/ktszgy80/sari/q/3/v/free-pink-combo-at-1108-3-1349-anand-sarees-unstitched-original-imag72p5hrbwfthx.jpeg?q=70",
+    "name": "Women's Blouse Wear Georgette Saree",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/400/400/ktszgy80/sari/s/2/g/free-combo-at-1108-2-1491-anand-sarees-unstitched-original-imag72p26d9muy7v.jpeg?q=70",
+    "name": "Men Solid Casual Jacket",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://rukminim1.flixcart.com/image/612/612/xif0q/jacket/j/k/b/l-1-no-tnvgywthdfuljacket-k15-tripr-original-imagkzg9dtrztzhu.jpeg?q=70",
+    "name": "Men Solid Casual Jacket",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/31ZBZisgW3L._AC_SR160,200_.jpg",
+    "name": "FUNDAY FASHION ",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/61tOUM33AeL._AC_SR320,400_.jpg",
+    "name": "Columbia Women's Suttle Mountain",
+    "price": "1020",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/61sq9cq8ggL._UX679_.jpg",
+    "name": "Columbia Womens Jacket",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/41LudCSftuL._AC_SR160,200_.jpg",
+    "name": "Printed Daily Wear Georgette Saree",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/717WHMe33EL._AC_UL320_.jpg",
+    "name": "U.S. POLO ASSN.",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/818-VoCs5UL._AC_UL320_.jpg",
+    "name": "United Colors of Benetton",
+    "price": "1170",
+    "strikedoffprice": "2599"
+  }
+]
+
+
+    let mainSection = document.getElementById("item-container")
+    let newData = JSON.parse(localStorage.getItem("newProduct"))
+
+    if(newData){
+        function fetchNewData(newData){            
+            newData.map((ele)=>{
+                userData.splice(0, 0, ele)
+            })        
+        }
+        fetchNewData(newData)
+    }    
+       
+    window.addEventListener("load",()=>{
+ 
+        renderCardList(userData)         
+    })
+
+
+    function renderCardList(cardData){
+       
+        mainSection.innerHTML = `
+        
+         <div class = "cardList">
+           ${cardData.map((ele)=>{
+              
+            let image = ele.image_url
+            let name = ele.name
+            let price = ele.price
+            
+            return getAsCard(image, name, price)
+             }).join("")
+            }     
+         </div
+
+        `
+   
+    }
+
+
+    function removeData(cardData){
+         
+      let item = cardData.parentElement.parentElement
+       item.remove()
+     }
+
+
+    function getAsCard(image, name, price){
+       
+        return `
+        
+         <div class = "card">
+            <div class = "card-img">
+                <img src = ${image} />
+            </div> 
+            <div class = "card-body">
+                 <h3 class="product-name">${name}</h3> 
+                 <h4>${price}</h4> 
+                 <button class="remove-Product" onClick="removeData(this)">Remove</button>
+            </div>          
+         </div>
+        
+        `
+        
+        
+    }
+
+
+
+</script>
+
+
