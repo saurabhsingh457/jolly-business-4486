@@ -22,6 +22,7 @@ for(let i=0;i<data.length;i++){
 
     div1.append(img,p1,p2,p3,butt1,butt2)
     butt1.addEventListener("click",function(){
+      
         alert("Order Processing")
         addData("OrderP",data[i]); 
         data.splice(data.length[i],1);
@@ -29,10 +30,13 @@ for(let i=0;i<data.length;i++){
     })
     sum+=+data[i].price;
     butt2.addEventListener("click",function(){
+     
         alert("Order Cancel")
         addData("cancel",data[i]);
         data.splice(data.length[i],1)
         localStorage.setItem("add",JSON.stringify(data))
+        
+
     })
     document.querySelector("#kav").append(inp,div1)
   }
